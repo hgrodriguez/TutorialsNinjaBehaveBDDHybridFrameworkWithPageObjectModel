@@ -27,9 +27,8 @@ def step_click(context):
 @then("Proper message should be displayed in Search results")  # noqa: F405
 def step_proper_message(context):
     """X"""
-    assert context.search_page.display_status_of_message(
-        "There is no product that matches the search criteria.ABC"
-    )
+    assert context.search_page.status_of_error_message(
+        "There is no product that matches the search criteria.")
 
 
 @then("Valid product should get displayed in Search results")  # noqa: F405
